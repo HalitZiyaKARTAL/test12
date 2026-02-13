@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CV</title>
+<style>
+:root{--b:#fff;--f:#000} .d{--b:#000;--f:#fff}
+
+body{
+    background:var(--b); color:var(--f);
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(1rem, 2.5vw, 1.15rem); 
+    line-height: 1.5;
+    max-width: 50em; 
+    margin: 0 auto; 
+    padding: 1.5em 1em; 
+    transition: 0.3s;
+}
+
+h1 { text-align: center; font-size: 2em; margin: 0.5em 0 1em 0; line-height: 1.2; }
+h3 { font-size: 1.25em; border-bottom: 1px solid; margin: 2em 0 0.5em; font-weight: bold; }
+
+a { color: inherit; }
+.c { white-space: pre-line; } 
+.s { font-weight: 600; }
+
+#t { position: absolute; top: 1em; right: 1em; font-size: 1.5em; background: 0 0; border: 0; padding: 0; cursor: pointer; }
+</style></head><body>
+
+<button id="t" onclick="b.classList.toggle('d');u()"></button>
+
+<h1>Curriculum Vitae</h1>
+
+<h3>Personal Information</h3>
+<div class="c"><b>Name:</b> Halit Ziya KARTAL
+<b>Email:</b> <a href="mailto:halitziyak13@gmail.com">halitziyak13@gmail.com</a>
+<b>Website:</b> <a href="https://halitziyakartal.github.io">halitziyakartal.github.io</a>
+<b>Socials:</b> Searching name is enough for almost all</div>
+
+<h3>Short Summary</h3>
+<div class="c">A curious person who likes to interact. You could interact for more info.</div>
+
+<h3>Education</h3>
+<div class="c"><b>University:</b> 4th grade electronic and communication engineering at Istanbul Technical University</div>
+
+<h3>Skills</h3>
+<div class="c">Usually a fast learner but prefers learning deeper logic rather than memorization.
+In classical format(to be filled later): some level of coding, basic math, basic ai use, C2 english, C2 turkish</div>
+
+<h3>Areas of Interest</h3>
+<div class="c">In general, almost anything that is either edge or evolving non monotonously;
+
+<span class="s">in fields,</span> ai, cutting edge sciences like genetic, particle physics, neurology, psychology, nanometer and subnanometer precision stuffs, cool weapons, cosmic stuff (like as neutron star matter), computation, coding, efficiency at art level, art level automatization etc;
+
+<span class="s">in format-style,</span> hi tech, stuff related to myself (like as with neurology), interesting discussions, developing ideas, testing ideas sometimes directly by clashing with other ideas if safely possible, getting my ideas crushed by others logically if my idea had weaknesses, lots of learning, adrenaline releasing things, producing helpful things
+
+
+<span class="s">Here is a turkish variant for better semantic meaning transfer:</span> Öğrenmek-Keşfetmek-Çözümlemek, Üretmek-Oluşturmak-Geliştirmek, Tartışmak-Sorgulamak-Fikirsel Çürütülmek Çürütmek, Deney Yapmak-Denemek, Etkileşimlerde Bulunmak, Sosyallik, Heyecan, Adrenalin, Kullan mak (bedenimi zihnimi becerilerimi vs).</div>
+
+<script>
+let b=document.body,t=document.getElementById('t');
+let u=()=>t.innerText=b.classList.contains('d')?'🔆':'🌑';
+if(window.matchMedia('(prefers-color-scheme:dark)').matches)b.classList.add('d');
+u();
+</script></body></html>
