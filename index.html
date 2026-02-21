@@ -1,36 +1,54 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CV</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halit Ziya-CV</title>
+<meta name="description" content="Halit Ziya-CV">
 <style>
-:root{--b:#fff;--f:#000} .d{--b:#000;--f:#fff}
-
-body{
-    background:var(--b); color:var(--f);
+body {
+    --b: #fff; --f: #000; --i: '🌑';
+    background: var(--b); color: var(--f);
     font-family: "Times New Roman", Times, serif;
     font-size: clamp(1rem, 2.5vw, 1.15rem); 
     line-height: 1.5;
     max-width: 50em; 
     margin: 0 auto; 
     padding: 1.5em 1em; 
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
+
+body:has(#t:checked) { --b: #000; --f: #fff; --i: '🔆'; }
+
+@media (prefers-color-scheme: dark) {
+    body { --b: #000; --f: #fff; --i: '🔆'; }
+    body:has(#t:checked) { --b: #fff; --f: #000; --i: '🌑'; }
+}
+
+#t { display: none; }
+#tb { position: absolute; top: 1em; right: 1em; font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s ease; display: inline-block; }
+#tb::after { content: var(--i); }
+#tb:hover { transform: scale(1.15); }
 
 h1 { text-align: center; font-size: 2em; margin: 0.5em 0 1em 0; line-height: 1.2; }
 h3 { font-size: 1.25em; border-bottom: 1px solid; margin: 2em 0 0.5em; font-weight: bold; }
 
-a { color: inherit; }
+a { color: inherit; font-weight: bold; }
+a:hover { text-decoration: none; opacity: 0.7; }
 .c { white-space: pre-line; } 
 .s { font-weight: 600; }
 
-#t { position: absolute; top: 1em; right: 1em; font-size: 1.5em; background: 0 0; border: 0; padding: 0; cursor: pointer; }
+@media print {
+    #tb { display: none; }
+    a { text-decoration: underline; }
+}
 </style></head><body>
 
-<button id="t" onclick="b.classList.toggle('d');u()"></button>
+<input type="checkbox" id="t" aria-label="Toggle Theme"><label for="t" id="tb" aria-hidden="true"></label>
 
 <h1>Curriculum Vitae</h1>
 
 <h3>Personal Information</h3>
 <div class="c"><b>Name:</b> Halit Ziya KARTAL
 <b>Email:</b> <a href="mailto:halitziyak13@gmail.com">halitziyak13@gmail.com</a>
-<b>Website:</b> <a href="https://halitziyakartal.github.io">halitziyakartal.github.io</a>
+<b>Website:</b> <a href="https://halitziyakartal.github.io">halitziyakartal.github.io</a><span id="pn"></span><noscript>
+<b>Number:</b> seems like JavaScript disabled, if it's not written in the link itself use mail or telegram etc</noscript>
 <b>Socials:</b> Searching name is enough for almost all</div>
 
 <h3>Short Summary</h3>
@@ -38,6 +56,12 @@ a { color: inherit; }
 
 <h3>Education</h3>
 <div class="c"><b>University:</b> 4th grade electronic and communication engineering at Istanbul Technical University</div>
+
+<h3>Analyse some of my codes using ai</h3>
+<div class="c">1) <a href="/test12/20260221_github_HalitZiyaKARTAL_test11_main_json.txt" download>download me to get one of the repo as text</a>
+2) upload that file to ai model(gemini 3.1 pro selected) in the link below 
+3) <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-pro-preview&prompt=analyse%20this%20repo%20and%20it%27s%20coder%20deep%0A%0A%7B%22rules%22:%7B%22thinking%22:%22max%3E5%20minutes,%20using%20all%20the%20input%20and%20not%20finishing%20thinking%20till%20all%20exhausted%22,%22verbosity%22:%22max%3E64000%20tokens%22,%22depth%22:%22max%3E%3Dusing%20all%20the%20input,%20leaving%20nothing%20out%20including%20the%20combined%20information%22%7D%7D" target="_blank">click me to open ai studio and send file</a>
+4) After getting response from ai ask company related questions or roles to see if repo already had shown capability about it.</div>
 
 <h3>Skills</h3>
 <div class="c">Usually a fast learner but prefers learning deeper logic rather than memorization.
@@ -50,12 +74,6 @@ In classical format(to be filled later): some level of coding, basic math, basic
 
 <span class="s">in format-style,</span> hi tech, stuff related to myself (like as with neurology), interesting discussions, developing ideas, testing ideas sometimes directly by clashing with other ideas if safely possible, getting my ideas crushed by others logically if my idea had weaknesses, lots of learning, adrenaline releasing things, producing helpful things
 
+<span class="s">Here is a turkish variant for better semantic meaning transfer:</span> Öğrenmek-Keşfetmek-Çözümlemek, Üretmek-Oluşturmak-Geliştirmek, Tartışmak-Sorgulamak-Fikirsel Çürütülmek Çürütmek, Deney Yapmak-Denemek, Etkileşimlerde Bulunmak, Sosyallik, Heyecan, Adrenalin, Kullanmak (bedenimi zihnimi becerilerimi vs).</div>
 
-<span class="s">Here is a turkish variant for better semantic meaning transfer:</span> Öğrenmek-Keşfetmek-Çözümlemek, Üretmek-Oluşturmak-Geliştirmek, Tartışmak-Sorgulamak-Fikirsel Çürütülmek Çürütmek, Deney Yapmak-Denemek, Etkileşimlerde Bulunmak, Sosyallik, Heyecan, Adrenalin, Kullan mak (bedenimi zihnimi becerilerimi vs).</div>
-
-<script>
-let b=document.body,t=document.getElementById('t');
-let u=()=>t.innerText=b.classList.contains('d')?'🔆':'🌑';
-if(window.matchMedia('(prefers-color-scheme:dark)').matches)b.classList.add('d');
-u();
-</script></body></html>
+<script>let n=new URLSearchParams(location.hash.slice(1)||location.search).get('number');if(n&&(n=n.trim().replace(' ','+'))&&/^\+?\d+$/.test(n)){if(n.length===12&&n[0]!=='+')n='+'+n;document.getElementById('pn').innerHTML=`\n<b>Number:</b> <a href="tel:${n}">${n}</a>`;}</script></body></html>
