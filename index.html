@@ -8,9 +8,26 @@
 <meta property="og:url" content="https://halitziyakartal.github.io/test12/">
 <meta name="twitter:card" content="summary">
 
+<script type="application/ld+json">
+{"@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Halit Ziya KARTAL",
+  "url":"https://halitziyakartal.github.io/",
+  "jobTitle":[
+    {"@language":"en","@value":"Developer \u2022 Electronic&Communication Engineer"},
+    {"@language":"tr","@value":"Elektronik Haberleşme mühendisi bir geliştirici"}],
+  "description":[
+    {"@language":"en","@value":"A curious thinkerer who likes to interact."},
+    {"@language":"tr","@value":"Öğrenmeye ilgili kurcalamayı seven meraklı bir düşünür."}],
+  "sameAs":[
+    "https://github.com/HalitZiyaKARTAL",
+    "https://www.linkedin.com/in/halit-ziya-kartal",
+    "https://x.com/halitziyak13",
+    "https://www.instagram.com/halitziyakartal",
+    "https://t.me/HalitZiyaKARTAL"]}</script>
+
 <style>
-body {
-    --b: #fff; --f: #000; --i: '\1F311';
+    body { --b: #fff; --f: #000; --i: '\1F311';
     background: var(--b); color: var(--f);
     font-family: "Times New Roman", Times, serif;
     font-size: clamp(1rem, 2.5vw, 1.15rem); 
@@ -18,15 +35,13 @@ body {
     max-width: 50em; 
     margin: 0 auto; 
     padding: 1.5em 1em; 
-    transition: background 0.3s, color 0.3s;
-}
+    transition: background 0.3s, color 0.3s;}
 
 body:has(#t:checked) { --b: #000; --f: #fff; --i: '\1F506'; }
 
 @media (prefers-color-scheme: dark) {
     body { --b: #000; --f: #fff; --i: '\1F506'; }
-    body:has(#t:checked) { --b: #fff; --f: #000; --i: '\1F311'; }
-}
+    body:has(#t:checked) { --b: #fff; --f: #000; --i: '\1F311'; }}
 
 #t { display: none; }
 #tb { position: absolute; top: 1em; right: 1em; font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s ease; display: inline-block; }
@@ -45,8 +60,7 @@ a:hover { text-decoration: none; opacity: 0.7; }
 
 @media print {
     #tb { display: none; }
-    a { text-decoration: underline; }
-}
+    a { text-decoration: underline; }}
 </style></head><body>
 
 <input type="checkbox" id="t" aria-label="Toggle Theme"><label for="t" id="tb" aria-hidden="true"></label>
