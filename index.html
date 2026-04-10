@@ -44,15 +44,14 @@ body:has(#t:checked) { --b: #000; --f: #fff; --i: '\1F506'; }
     body:has(#t:checked) { --b: #fff; --f: #000; --i: '\1F311'; }}
 
 #t { display: none; }
-
-#tb { position: absolute; top: 1em; right: 1em; font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s ease; display: inline-block; z-index: 9; }
+#tb { position: absolute; top: 1em; right: 1em; font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s ease; display: inline-block; }
 #tb::after { content: var(--i); }
 #tb:hover { transform: scale(1.15); }
 
 h1 { text-align: center; font-size: 2em; margin: 0.5em 0 1em 0; line-height: 1.2; }
 h2 { font-size: 1.25em; border-bottom: 1px solid; margin: 2em 0 0.5em; font-weight: bold; }
 
-a { color: inherit; font-weight: bold; position: relative; z-index: 9; }
+a { color: inherit; font-weight: bold; }
 a:hover { text-decoration: none; opacity: 0.7; }
 .c { white-space: pre-line; } 
 .s { font-weight: 600; }
@@ -64,18 +63,8 @@ a:hover { text-decoration: none; opacity: 0.7; }
 @media print {
     #tb { display: none; }
     a { text-decoration: underline; }
-    .print-only { display: inline; }
-}
-
-  
-.langcheck1 { display:block; width:100%; height:clamp(15em, 28em - 12vw, 25em); margin-top:1em; overflow:visible; transition:0s 999s; --a:afk 2s 999s forwards; }
-.idle { position:fixed; inset:0; z-index:5; opacity:0; transition:0s 999s; }
-.egg { height:100%; display:grid; place-content:center; text-align:center; border:1px dashed var(--f); padding:1em; box-sizing:border-box; opacity:0; animation:var(--a); }
-.langcheck1:has(.idle:is(:hover,:active)) { height:0; margin:0; opacity:0; overflow:hidden; transition:0s; --a:none; }
-.idle:is(:hover,:active) { visibility:hidden; transition:0s; }
-@keyframes afk { to { opacity:1; } }
+    .print-only { display: inline; }}
 </style></head><body>
-
 
 <input type="checkbox" id="t" aria-label="Toggle Theme"><label for="t" id="tb" aria-hidden="true"></label>
 
@@ -87,7 +76,7 @@ a:hover { text-decoration: none; opacity: 0.7; }
 <b>Website:</b> <a href="https://halitziyakartal.github.io">halitziyakartal.github.io</a><span id="pn"></span><noscript>
 <b>Number:</b> seems like JavaScript disabled, if it's not written in the link itself use mail or telegram etc</noscript>
 <b>Socials:</b> Searching name is enough for almost all<span class="print-only">
-<b>Original CV link:</b> <a href="https://halitziyakartal.github.io/test12/">https://halitziyakartal.github.io/test12/</a></span></div>
+<b>Original CV link:</b> <a href="https://halitziyakartal.github.io/test12/">https://halitziyakartal.github.io/test12/</a> (use this for easier link clicks etc since pdf is more static)</span></div>
 
 <h2>Short Summary</h2>
 <div class="c">A curious person who likes to interact. You could interact for more info.</div>
@@ -112,20 +101,8 @@ In classical format(to be filled later): some level of coding, basic math, basic
 
 <span class="s">in fields,</span> ai, cutting edge sciences like genetic, particle physics, neurology, psychology, nanometer and subnanometer precision stuffs, cool weapons, cosmic stuff (like as neutron star matter), computation, coding, efficiency at art level, art level automatization etc;
 
-<span class="s">in format-style,</span> hi tech, stuff related to myself (like as with neurology), interesting discussions, developing ideas, testing ideas sometimes directly by clashing with other ideas if safely possible, getting my ideas crushed by others logically if my idea had weaknesses, lots of learning, adrenaline releasing things, producing helpful things.</div>
+<span class="s">in format-style,</span> hi tech, stuff related to myself (like as with neurology), interesting discussions, developing ideas, testing ideas sometimes directly by clashing with other ideas if safely possible, getting my ideas crushed by others logically if my idea had weaknesses, lots of learning, adrenaline releasing things, producing helpful things
 
-<svg class="langcheck1" xmlns="http://www.w3.org/2000/svg">
-  <switch>
-    <foreignObject systemLanguage="tr" width="100%" height="100%">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="c" style="margin:0; padding:0"><span class="s">Here is a turkish variant for better semantic meaning transfer:</span> Öğrenmek-Keşfetmek-Çözümlemek, Üretmek-Oluşturmak-Geliştirmek, Tartışmak-Sorgulamak-Fikirsel Çürütülmek Çürütmek, Deney Yapmak-Denemek, Etkileşimlerde Bulunmak, Sosyallik, Heyecan, Adrenalin, Kullanmak (bedenimi zihnimi becerilerimi vs).</div>
-    </foreignObject>
-    <foreignObject width="100%" height="100%">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="height:100%">
-        <div class="egg">seems like you stopped interacting for at least 15 minutes:) this is an easter egg, if you wanna see more details check the source code(ask any ai if you don't know how to do)(if you click or move mouse etc it vanishes again, it's only visible after 999 seconds conitious afk time)</div>
-        <div class="idle"></div>
-      </div>
-    </foreignObject>
-  </switch>
-</svg>
+<span class="s">Here is a turkish variant for better semantic meaning transfer:</span> Öğrenmek-Keşfetmek-Çözümlemek, Üretmek-Oluşturmak-Geliştirmek, Tartışmak-Sorgulamak-Fikirsel Çürütülmek Çürütmek, Deney Yapmak-Denemek, Etkileşimlerde Bulunmak, Sosyallik, Heyecan, Adrenalin, Kullanmak (bedenimi zihnimi becerilerimi vs).</div>
 
 <script>let n=new URLSearchParams(location.hash.slice(1)||location.search).get('number');if(n&&(n=n.trim().replace(' ','+'))&&/^\+?\d+$/.test(n)){if(n.length===12&&n[0]!=='+')n='+'+n;document.getElementById('pn').innerHTML=`\n<b>Number:</b> <a href="tel:${n}">${n}</a>`;}</script></body></html>
